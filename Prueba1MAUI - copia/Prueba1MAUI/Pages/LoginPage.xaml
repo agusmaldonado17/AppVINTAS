@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="Prueba1MAUI.Pages.LoginPage"
+  BackgroundImageSource="imagen_fondo.png"
+  Padding="{StaticResource PagePadding}">
+
+    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*">
+
+        <!-- 1) Logo INTAS -->
+        <Image Source="logo_vintas.png"
+           HeightRequest="80"
+           HorizontalOptions="Center"
+           Margin="0,40,0,10"
+           Grid.Row="0" />
+
+        <!-- 2) Formulario CENTRADO -->
+        <VerticalStackLayout
+        Grid.Row="1"
+        Spacing="0"
+        Padding="20"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand"
+        WidthRequest="300">
+
+            <Label Text="Usuario" Style="{StaticResource FieldLabelStyle}" />
+            <Frame Padding="0" CornerRadius="20" HasShadow="False" BackgroundColor="White" Margin="0,0,0,10">
+                <Entry Placeholder="Usuario"
+               Text="{Binding Username}"
+               FontFamily="Montserrat"
+               HeightRequest="40"
+               Margin="10,0" />
+            </Frame>
+
+            <Label Text="Contraseña" Style="{StaticResource FieldLabelStyle}" />
+            <Frame Padding="0" CornerRadius="20" HasShadow="False" BackgroundColor="White" Margin="0,0,0,10">
+                <Entry Placeholder="Contraseña"
+               IsPassword="True"
+               Text="{Binding Password}"
+               FontFamily="Montserrat"
+               HeightRequest="40"
+               Margin="10,0" />
+            </Frame>
+
+        </VerticalStackLayout>
+
+        <!-- 3) Botón Ingresar -->
+        <Button Text="Ingresar"
+            Command="{Binding LoginCommand}"
+            Style="{StaticResource PrimaryButtonStyle}"
+            WidthRequest="200"
+            HorizontalOptions="Center"
+            Grid.Row="2"
+            Margin="0,20" />
+
+    </Grid>
+</ContentPage>

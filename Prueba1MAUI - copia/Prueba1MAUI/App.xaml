@@ -1,0 +1,76 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Prueba1MAUI"
+             x:Class="Prueba1MAUI.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <!-- Colores -->
+            <Color x:Key="VioletaFuerte">#3D405B</Color>
+            <Color x:Key="BlancoFondo">#F4F1DE</Color>
+            <Color x:Key="SalmonFuerte">#E07A5F</Color>
+            <Color x:Key="SalmonClaro">#EAB69F</Color>
+            <Color x:Key="NaranjaClaro">#F3DFB7</Color>
+
+            <!-- Boton -->
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource VioletaFuerte}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="FontFamily" Value="MontserratBold" />
+            </Style>
+
+            <!-- Botón de menú estilo “pill” -->
+            <Style x:Key="MenuButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource SalmonClaro}" />
+                <Setter Property="TextColor"       Value="{StaticResource Black}" />
+                <Setter Property="CornerRadius"    Value="20" />
+                <Setter Property="FontFamily"      Value="Montserrat" />
+                <Setter Property="FontSize"        Value="16" />
+                <Setter Property="HeightRequest"   Value="50" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="Margin"          Value="0,10" />
+            </Style>
+
+
+            <!-- Ajsuta el margen y eso segun el dispositivo-->
+            <OnPlatform x:TypeArguments="Thickness" x:Key="PagePadding">
+                <On Platform="Android,iOS,MacCatalyst" Value="20"/>
+                <On Platform="Windows" Value="30"/>
+            </OnPlatform>
+
+            <!-- Títulos de página -->
+            <Style x:Key="PageTitleStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="MontserratBold" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="TextColor" Value="{StaticResource VioletaFuerte}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- Labels de campo -->
+            <Style x:Key="FieldLabelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Montserrat" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <!-- Entradas de texto -->
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="FontFamily" Value="Montserrat" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

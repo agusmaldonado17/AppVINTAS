@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Prueba1MAUI.Pages.AboutPage"
+    BackgroundColor="{StaticResource BlancoFondo}"
+    Padding="{StaticResource PagePadding}">
+
+    <Grid RowDefinitions="100,*,Auto" ColumnDefinitions="*">
+    <Grid Grid.Row="0">
+            <!-- Fondo exportado de Figma -->
+            <Image Source="fondo_header.png"
+                     Aspect="AspectFill"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"/>
+
+
+            <Image Source="logo_vintas.png"
+                     HeightRequest="80"              
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"
+                     Margin="0,10,10,0" />
+        </Grid>
+
+    <!-- 2) Contenido central -->
+        <VerticalStackLayout
+        Grid.Row="1"
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="Center"
+        Spacing="20">
+
+            <!-- Foto circular -->
+            <Frame
+          HeightRequest="150"
+          WidthRequest="150"
+          CornerRadius="75"
+          HasShadow="False"
+          Padding="0">
+                <Image Source="foto_desarrollador.png"
+               Aspect="AspectFill"/>
+            </Frame>
+
+            <!-- Nombre -->
+            <Label Text="Agustina Maldonado"
+             FontFamily="MontserratBold"
+             FontSize="22"
+             TextColor="{StaticResource VioletaFuerte}"
+             HorizontalOptions="Center"/>
+
+            <!-- Descripción en tarjeta redondeada -->
+            <Frame
+                  BackgroundColor="{StaticResource NaranjaClaro}"
+                  CornerRadius="16"
+                  Padding="15"
+                  HasShadow="False"
+                  Margin="20,0"
+                  HorizontalOptions="FillAndExpand">
+                <Label
+               Text="Tengo 22 años, estudio la carrera de Desarrollo de Software. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec facilisis purus. Nulla facilisi. Proin vitae lorem suscipit, convallis nisl at, egestas nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ultricies, enim sit amet suscipit cursus, purus nunc ullamcorper orci, quis laoreet risus odio non ligula. Integer sit amet urna at sapien mollis tincidunt. Duis et tortor nec sapien elementum fermentum. Sed in tellus vitae nunc fermentum scelerisque. Praesent at sem sit amet est dignissim scelerisque non ac purus."
+               FontFamily="Montserrat"
+               FontSize="16"
+               TextColor="{StaticResource VioletaFuerte}"
+               HorizontalTextAlignment="Center"
+                LineHeight="2"
+                    />
+            </Frame>
+
+        </VerticalStackLayout>
+
+        <!-- 3) Pie (vacío o para futuros elementos) -->
+        <BoxView Grid.Row="2"
+             Color="Transparent"
+             HeightRequest="20"/>
+    </Grid>
+</ContentPage>

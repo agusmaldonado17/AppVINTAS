@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Prueba1MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Prueba1MAUI.Pages">
+
+    <!-- SOLO un ShellContent, que crea un NavigationPage arrancando en LoginPage -->
+    <!-- Sólo un ShellContent que cargue la LoginPage al arrancar -->
+    <ShellContent
+      Route="login"
+      ContentTemplate="{DataTemplate pages:LoginPage}" />
+
+</Shell>
